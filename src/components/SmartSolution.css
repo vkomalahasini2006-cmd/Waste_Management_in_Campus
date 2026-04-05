@@ -1,0 +1,129 @@
+.solution-section {
+  background-color: white;
+}
+
+.solution-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.solution-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.lead-text {
+  font-size: 1.2rem;
+  color: var(--color-primary-dark);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.feat-item {
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+  background: var(--color-bg);
+  padding: 1.5rem;
+  border-radius: var(--border-radius-sm);
+  transition: var(--transition);
+}
+
+.feat-item:hover {
+  background: var(--color-surface-hover);
+  transform: translateX(10px);
+}
+
+.feat-icon {
+  background: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.feat-item h4 {
+  margin-bottom: 0.3rem;
+}
+
+.feat-item p {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.solution-image-placeholder {
+  height: 100%;
+  min-height: 500px;
+  border-radius: var(--border-radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(64,145,108,0.1) 0%, rgba(173,232,244,0.1) 100%);
+  border: 1px solid rgba(64,145,108,0.2);
+}
+
+.eco-circle {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: var(--shadow-lg);
+  animation: float 6s ease-in-out infinite;
+}
+
+.eco-circle::before {
+  content: '';
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  border: 2px dashed var(--color-primary-light);
+  animation: rotate 20s linear infinite;
+}
+
+.inner-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  position: absolute;
+  opacity: 0.1;
+}
+
+.eco-circle span {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  z-index: 2;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 968px) {
+  .solution-content {
+    grid-template-columns: 1fr;
+  }
+  .solution-image-placeholder {
+    min-height: 350px;
+  }
+}

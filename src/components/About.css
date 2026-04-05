@@ -1,0 +1,103 @@
+.about-section {
+  background-color: white;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.benefits-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.benefits-list li {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.check-icon {
+  color: var(--color-primary);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.about-visual {
+  padding: 3rem;
+  background: var(--color-bg);
+}
+
+.about-visual h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.process-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  position: relative;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  background: white;
+  padding: 1rem;
+  border-radius: var(--border-radius-sm);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+  z-index: 2;
+  border: 1px solid rgba(45, 106, 79, 0.1);
+  transition: transform 0.2s;
+}
+
+.step:hover {
+  transform: translateX(5px);
+  border-color: var(--color-primary-light);
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  background: var(--color-primary-dark);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.step span {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.step-connector {
+  width: 2px;
+  height: 20px;
+  background: dashed 2px var(--color-primary-light);
+  z-index: 1;
+}
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
